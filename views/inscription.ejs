@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../public/js/script.js"></script>
+
+	<title>Inscription</title>
+</head>
+<body id='inscriptionPage'>
+<% include navbar%>
+    <% if (result) {%>
+    <div class="row">
+        <div class='offset-4 col-md-4'>
+            <div class="alert alert-success" role="alert">
+                <%= result %>
+            </div>
+        </div>    
+    </div>
+    <% } %>
+    <div class="contact-form">
+        <img src="../public/imagesJS/inscription.jpg" alt="" class="image">
+    <form id="Contact-form" method="post" action="/inscription" role="form" class="bord" style="padding: 20px; margin: 20px;">
+        <center><h4>Fiche d'Inscription</h4></center>
+            <div class="form-group">
+              <label for="">Nom<span style="color:red">*</span></label>
+              <input type="text" class="form-control" name= "nom" id="nom" aria-describedby="textlHelp" placeholder="Entrer votre nom">
+            </div>
+            <div class="form-group">
+                <label for="">Prenom<span style="color:red">*</span></label>
+                <input type="text" class="form-control" name= "prenom" id="prenom" aria-describedby="textlHelp" placeholder="Entrer votre prenom">
+            </div>
+            <div class="form-group">
+                <label for= "Contact">Numero<span style="color:red">*</span></label>
+                <input type="tel" name="numero" class="form-control" id="numero" placeholder="Entrer votre numero">
+            </div>
+            <div class="form-group">
+                <label for="">Créer un mot de passe<span style="color:red">*</span></label>
+                <input type="password" class="form-control" name= "mdp" id="mdp" aria-describedby="textlHelp" placeholder="Entrer mot de passe">
+            </div>
+            <div class="form-group">
+                <label for="">Confirmer mot de passe<span style="color:red">*</span></label>
+                <input type="password" class="form-control" name= "mdp2" id="mdp" aria-describedby="textlHelp" placeholder="confirmer mot de passe">
+            </div>
+            <div class="col-md-12">
+                <p class="blue" style="color: red;"><strong>*Ces informations sont requises</strong></p>
+            </div>
+        <center><button type="submit" class="button1">Valider</button>
+    </form>
+    </div>
+</body>
+</html>
